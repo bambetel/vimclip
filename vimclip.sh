@@ -1,4 +1,4 @@
 tmpfile=$(mktemp)
-xclip -o -sel clip > $tmpfile
+xsel -ob > $tmpfile
 nvim $tmpfile
-xclip -i -sel clip $tmpfile
+cat $tmpfile | xsel -ib
